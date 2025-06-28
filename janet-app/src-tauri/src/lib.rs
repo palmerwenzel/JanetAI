@@ -11,7 +11,10 @@ fn greet(name: &str) -> String {
 pub fn run() {
     tauri::Builder::default()
         .setup(|app| {
-            app.global_shortcut().register("CommandOrControl+Space")?;
+            // Try to register global shortcut, ignore if already registered
+            if let Err(e) = app.global_shortcut().register("CommandOrControl+Space") {
+                println!("Global shortcut registration failed (may already be registered): {}", e);
+            }
             
             let app_handle = app.handle().clone();
             app.listen("shortcut", move |_event| {

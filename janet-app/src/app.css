@@ -4,11 +4,11 @@
 
 @layer base {
   :root {
-    --background: 17 17 17; /* #111111 */
+    --background: 0 0 0; /* Transparent black to let gradient show */
     --foreground: 248 248 248; /* #F8F8F8 */
 
     --border: 55 65 81; /* Gray-700 from before */
-    --input: 55 65 81;
+    --input: 45 55 71; /* Slightly darker for better contrast on gradient */
     --ring: 248 248 248; /* #F8F8F8 */
 
     --muted-foreground: 156 163 175; /* Gray-400 from before */
@@ -17,6 +17,12 @@
     --accent: 255 38 115; /* Vibrant Pink */
     --destructive: 153 51 51; /* Muted Red */
     --warning: 255 191 0; /* Soft Yellow */
+    
+    /* Janet's Warm Gradient Spectrum */
+    --nebulapurple: 106 73 210; /* #6A49D2 */
+    --neonfuchsia: 203 64 171; /* #CB40AB */
+    --marssunset: 245 78 91; /* #F54E5B */
+    --atomictangerine: 253 117 66; /* #FD7542 */
   }
 
   .dark {
@@ -31,8 +37,15 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: 'Geist Sans', sans-serif;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
+    min-height: 100vh;
+  }
+  
+  html {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
+    min-height: 100vh;
   }
 
   * {

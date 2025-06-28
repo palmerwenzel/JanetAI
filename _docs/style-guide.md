@@ -14,8 +14,10 @@ Colors are defined as CSS variables in `src/app.css` and mapped in `tailwind.con
     -   `background`: A near-black (`#111111`).
     -   `foreground`: A soft off-white (`#F8F8F8`).
 -   **Primary Accent (Gradient):**
-    -   A vibrant, warm gradient transitioning from **Pink** to **Orange** to **Purple**.
+    -   A vibrant, warm gradient spanning the full warm color spectrum: **Purple** → **Magenta/Pink** → **Red** → **Orange**.
+    -   Core warm colors: `nebulapurple` (#6A49D2), `neonfuchsia` (#CB40AB), `marssunset` (#F54E5B), `atomictangerine` (#FD7542)
     -   Used for primary interactive elements, focus states, and key branding moments.
+    -   Creates an energetic, intelligent feeling that suggests warmth and AI responsiveness.
 -   **Secondary Accent (Solid):**
     -   `accent`: The vibrant **Pink** from the gradient, used as a solid color for links and secondary interactive elements.
 -   **Semantic Colors:**

@@ -18,6 +18,11 @@ export default {
 				accent: 'rgb(var(--accent) / <alpha-value>)',
 				destructive: 'rgb(var(--destructive) / <alpha-value>)',
 				warning: 'rgb(var(--warning) / <alpha-value>)',
+				// Janet's warm gradient spectrum
+				nebulapurple: 'rgb(var(--nebulapurple) / <alpha-value>)',
+				neonfuchsia: 'rgb(var(--neonfuchsia) / <alpha-value>)',
+				marssunset: 'rgb(var(--marssunset) / <alpha-value>)',
+				atomictangerine: 'rgb(var(--atomictangerine) / <alpha-value>)',
 			},
 			fontFamily: {
 				sans: ['Geist Sans', 'sans-serif'],
@@ -27,7 +32,17 @@ export default {
 				sm: '4px',
 				md: '8px',
 				lg: '16px',
-			}
+			},
+			animation: {
+				"border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+			},
+			keyframes: {
+				"border-beam": {
+					"100%": {
+						"offset-distance": "100%",
+					},
+				},
+			},
 		},
 	},
 	plugins: [],
