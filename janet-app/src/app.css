@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 17 17 17; /* #111111 */
+    --foreground: 248 248 248; /* #F8F8F8 */
+
+    --border: 55 65 81; /* Gray-700 from before */
+    --input: 55 65 81;
+    --ring: 248 248 248; /* #F8F8F8 */
+
+    --muted-foreground: 156 163 175; /* Gray-400 from before */
+    
+    /* New Accent & Semantic Colors */
+    --accent: 255 38 115; /* Vibrant Pink */
+    --destructive: 153 51 51; /* Muted Red */
+    --warning: 255 191 0; /* Soft Yellow */
+  }
+
+  .dark {
+    --background: 0 0 0; /* Black */
+    --foreground: 255 255 255; /* White */
+
+    --border: 55 65 81; /* Gray-700 */
+    --input: 55 65 81; /* Gray-700 */
+    --ring: 255 255 255; /* White */
+    
+    --muted-foreground: 156 163 175; /* Gray-400 */
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Geist Sans', sans-serif;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
