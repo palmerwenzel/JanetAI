@@ -6,7 +6,6 @@
 <script lang="ts">
   import { cn } from "$lib/utils";
   import { onMount, tick } from "svelte";
-  import { Motion } from "svelte-motion";
 
   let className: any = "";
   export { className as class };
@@ -15,8 +14,6 @@
   export let toRef;
   export let curvature = 0;
   export let reverse = false;
-  export let duration = Math.random() * 3 + 4;
-  export let delay = 0;
   export let pathColor = "gray";
   export let pathWidth = 2;
   export let pathOpacity = 0.2;

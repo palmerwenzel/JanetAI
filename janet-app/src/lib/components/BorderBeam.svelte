@@ -7,7 +7,7 @@
   import { cn } from "$lib/utils";
 
   /** Size of the beam in pixels */
-  export let size = 200;
+  export let size = 400;
   /** Animation duration in seconds - slower for more elegant feel */
   export let duration = 8;
   /** Starting position anchor percentage */
@@ -36,7 +36,7 @@
   style:--anchor={anchor}
   style:--duration={duration}
   class={cn(
-    "pointer-events-none absolute inset-[0] rounded-[inherit] [border:calc(var(--border-width)*1px)_solid_transparent]",
+    "pointer-events-none absolute inset-[-1px] rounded-[inherit] [border:calc(var(--border-width)*1.5px)_solid_transparent]",
 
     // mask styles
     "![mask-clip:padding-box,border-box] ![mask-composite:intersect] [mask:linear-gradient(transparent,transparent),linear-gradient(white,white)]",
