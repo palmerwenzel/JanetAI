@@ -12,7 +12,7 @@
     showBeam?: boolean;
   }
 
-  let { showBeam = true, ...rest } = $props<$$Props>();
+  let { showBeam = true, ...rest }: $$Props = $props();
 </script>
 
 <div class="relative flex h-12 w-full rounded-lg border border-input bg-black/20 backdrop-blur-sm">
@@ -27,7 +27,7 @@
   {/if}
   
   <input
-    class="flex-1 bg-transparent px-4 py-3 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
+    class="flex-1 bg-transparent px-4 py-3 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground outline-none border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none focus-visible:outline-none focus-visible:ring-0 focus-visible:border-none disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200 rounded-lg"
     {...rest}
   />
 </div>
